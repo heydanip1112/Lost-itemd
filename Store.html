@@ -299,6 +299,35 @@
       </div>
     </section>
 <style>
+  
+/* Hover para enlaces del menú */
+nav a {
+  color: inherit;
+  display: inline-block; /* Necesario para que transform funcione */
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+nav a:hover svg path {
+  fill: #478ac9;
+  transition: fill 0.3s ease;
+}
+
+/* Efecto al pasar sobre el ícono del carrito */
+.u-shopping-cart:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.u-shopping-cart:hover svg path {
+  fill: #478ac9;
+  transition: fill 0.3s ease;
+}
 
 /* Clase que indica el enlace del menú activo */
 .nav-link-active {
