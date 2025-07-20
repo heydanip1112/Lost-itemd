@@ -25,12 +25,31 @@
     
     <!-- Datos estructurados para SEO -->
     <script type="application/ld+json">{
-		"@context": "http://schema.org",
-		"@type": "Organization",
-		"name": "Site1",
-		"logo": "images/logoesen.png"
-    }
-  </script>
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Site1",
+      "logo": "images/logoesen.png"
+      }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Obtén la ruta actual sin dominio ni parámetros
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Selecciona todos los enlaces del menú
+        const menuLinks = document.querySelectorAll("nav a");
+
+        // Recorre los enlaces y compara su href
+        menuLinks.forEach(link => {
+          const href = link.getAttribute("href");
+          if (href === currentPage || (href === "./" && currentPage === "")) {
+            link.classList.add("nav-link-active");
+          }
+        });
+      });
+    </script>
+
 
   <!-- Colores del tema y SEO social -->
   <meta name="theme-color" content="#478ac9">
@@ -39,6 +58,7 @@
   <meta property="og:type" content="website">
   <meta data-intl-tel-input-cdn-path="intlTelInput/">
 </head>
+
 
 <body data-home-page="Casa.html" data-home-page-title="Casa" data-path-to-root="./" data-include-products="true" class="u-body u-clearfix u-xl-mode" data-lang="es">
   
@@ -218,6 +238,13 @@
       </div>
     </footer>         
 <style>
+/* Clase que indica el enlace del menú activo */
+.nav-link-active {
+  font-weight: bold;
+  border-bottom: 2px solid #478ac9; /* Puedes ajustar estilo */
+  color: #478ac9 !important;
+}
+
 
 .u-header-flex {
   display: flex !important;
