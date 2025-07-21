@@ -229,12 +229,98 @@
     
     
     
-    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-2 u-footer" id="footer"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Escuela Superior de Economía y Negocios&nbsp;</p>
+    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-2 u-footer" id="footer" style="padding: 30px 20px;">
+      <div class="u-clearfix u-sheet u-sheet-1" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <p class="u-small-text u-text u-text-variant u-text-1" style="margin: 0;">Escuela Superior de Economía y Negocios&nbsp;</p>
+    
+        <!-- Contenedor de iconos -->
+        <div style="display: flex; gap: 30px; position: relative;">
+    
+          <!-- Icono WhatsApp -->
+          <div style="position: relative; cursor: pointer;">
+            <img 
+              src="images/733585.png" 
+              alt="WhatsApp Icon" 
+              style="width: 40px; height: 40px;" 
+              onclick="mostrarContacto('whatsapp', this)" 
+              title="Click para ver contacto WhatsApp"
+            >
+            <div id="whatsapp-info" class="tooltip-box" style="display: none;">
+              +12-345-678-89089
+            </div>
+          </div>
+    
+          <!-- Icono Gmail -->
+          <div style="position: relative; cursor: pointer;">
+            <img 
+              src="images/684849-34712721.png" 
+              alt="Gmail Icon" 
+              style="width: 40px; height: 40px;" 
+              onclick="mostrarContacto('email', this)" 
+              title="Click para ver contacto Email"
+            >
+            <div id="email-info" class="tooltip-box" style="display: none;">
+              someone@example.com
+            </div>
+          </div>
+    
+        </div>
       </div>
     </footer>
+    
+    <style>
+      .tooltip-box {
+        position: absolute;
+        bottom: 50px; /* Aparece arriba del icono */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        white-space: nowrap;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        z-index: 10;
+        user-select: none;
+      }
+    </style>
+    
+    <script>
+      function mostrarContacto(tipo, element) {
+        const whatsappInfo = document.getElementById('whatsapp-info');
+        const emailInfo = document.getElementById('email-info');
+    
+        // Ocultar ambos inicialmente
+        whatsappInfo.style.display = 'none';
+        emailInfo.style.display = 'none';
+    
+        // Mostrar solo el que corresponde
+        if (tipo === 'whatsapp') {
+          whatsappInfo.style.display = 'block';
+        } else if (tipo === 'email') {
+          emailInfo.style.display = 'block';
+        }
+      }
+    
+      // Para ocultar si se hace clic afuera
+      document.addEventListener('click', function(event) {
+        const whatsappInfo = document.getElementById('whatsapp-info');
+        const emailInfo = document.getElementById('email-info');
+    
+        const whatsappIcon = whatsappInfo.previousElementSibling;
+        const emailIcon = emailInfo.previousElementSibling;
+    
+        if (!whatsappIcon.contains(event.target) && !whatsappInfo.contains(event.target)) {
+          whatsappInfo.style.display = 'none';
+        }
+        if (!emailIcon.contains(event.target) && !emailInfo.contains(event.target)) {
+          emailInfo.style.display = 'none';
+        }
+      });
+    </script>
+    
 
-    <section class="u-backlink u-clearfix u-grey-80"></section>
   <section class="u-black u-clearfix u-container-style u-dialog-block u-opacity u-opacity-70 u-payment-dialog u-valign-middle u-dialog-section-5" id="popup-cc50">
       <div class="u-align-center u-container-align-center u-container-style u-dialog u-radius-25 u-shape-round u-white u-dialog-1">
         <div class="u-container-layout u-valign-top u-container-layout-1">

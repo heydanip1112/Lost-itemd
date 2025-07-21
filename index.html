@@ -202,36 +202,99 @@
     </section>
 
     <!-- Sección de contacto (WhatsApp y correo) -->
-    <section class="u-clearfix u-container-align-center u-custom-color-1 u-section-4" id="sec-547f">
-      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-align-center-lg u-container-align-center-md u-container-align-center-xl u-container-style u-layout-cell u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-direction="">
-                <div class="u-container-layout u-valign-top u-container-layout-1"><span class="u-align-center u-file-icon u-icon u-icon-1"><img src="images/733585.png" alt=""></span>
-                  <h4 class="u-align-center u-text u-text-1"> Whatsapp Support</h4>
-                  <p class="u-align-center u-text u-text-default-lg u-text-default-md u-text-default-xl u-text-2"> Send us a WhatsApp message if you want to recover your items.</p>
-                  <a href="tel:+12-345-678-89089" class="u-active-palette-3-light-1 u-btn u-button-style u-custom u-hover-palette-3-light-1 u-palette-3-base u-btn-1" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">7115-3444 </a>
-                </div>
-              </div>
-              <div class="cell-temp-clone u-container-align-center u-container-style u-layout-cell u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500" data-animation-direction="">
-                <div class="u-container-layout u-valign-top u-container-layout-2"><span class="u-align-center u-file-icon u-icon u-text-white u-icon-2"><img src="images/684849-34712721.png" alt=""></span>
-                  <h4 class="u-align-center u-text u-text-3">Gmail</h4>
-                  <p class="u-align-center u-text u-text-4"> Send us an email if you lost something.</p>
-                  <a href="tel:+12-345-678-89089" class="u-active-palette-3-light-1 u-btn u-button-style u-custom u-hover-palette-3-light-1 u-palette-3-base u-btn-2" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">Live chart</a>
-                </div>
-              </div>
+    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-2 u-footer" id="footer" style="padding: 30px 20px;">
+      <div class="u-clearfix u-sheet u-sheet-1" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+        <p class="u-small-text u-text u-text-variant u-text-1" style="margin: 0;">Escuela Superior de Economía y Negocios&nbsp;</p>
+    
+        <!-- Contenedor de iconos -->
+        <div style="display: flex; gap: 30px; position: relative;">
+    
+          <!-- Icono WhatsApp -->
+          <div style="position: relative; text-align: center; cursor: pointer;">
+            <img 
+              src="images/733585.png" 
+              alt="WhatsApp Icon" 
+              style="width: 40px; height: 40px;" 
+              onclick="mostrarContacto('whatsapp', this)" 
+              title="Click para ver contacto WhatsApp"
+            >
+            <div id="whatsapp-info" class="tooltip-box" style="display: none;">
+              +12-345-678-89089
             </div>
           </div>
+    
+          <!-- Icono Gmail -->
+          <div style="position: relative; text-align: center; cursor: pointer;">
+            <img 
+              src="images/684849-34712721.png" 
+              alt="Gmail Icon" 
+              style="width: 40px; height: 40px;" 
+              onclick="mostrarContacto('email', this)" 
+              title="Click para ver contacto Email"
+            >
+            <div id="email-info" class="tooltip-box" style="display: none;">
+              someone@example.com
+            </div>
+          </div>
+    
         </div>
       </div>
-    </section>
+    </footer>
     
-    <!-- Pie de página -->
-    <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-2 u-footer" id="footer"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Escuela Superior de Economía y Negocios&nbsp;</p>
-      </div>
-    </footer>         
+    <style>
+      .tooltip-box {
+        position: absolute;
+        bottom: 50px; /* arriba del ícono */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 6px;
+        white-space: nowrap;
+        font-size: 14px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        z-index: 10;
+        user-select: none;
+      }
+    </style>
+    
+    <script>
+      function mostrarContacto(tipo, element) {
+        const whatsappInfo = document.getElementById('whatsapp-info');
+        const emailInfo = document.getElementById('email-info');
+    
+        // Ocultar ambos por defecto
+        whatsappInfo.style.display = 'none';
+        emailInfo.style.display = 'none';
+    
+        // Mostrar el que corresponde
+        if (tipo === 'whatsapp') {
+          whatsappInfo.style.display = 'block';
+        } else if (tipo === 'email') {
+          emailInfo.style.display = 'block';
+        }
+      }
+    
+      // Opcional: cerrar tooltip si haces clic afuera
+      document.addEventListener('click', function(event) {
+        const whatsappInfo = document.getElementById('whatsapp-info');
+        const emailInfo = document.getElementById('email-info');
+    
+        const whatsappIcon = whatsappInfo.previousElementSibling;
+        const emailIcon = emailInfo.previousElementSibling;
+    
+        if (!whatsappIcon.contains(event.target) && !whatsappInfo.contains(event.target)) {
+          whatsappInfo.style.display = 'none';
+        }
+        if (!emailIcon.contains(event.target) && !emailInfo.contains(event.target)) {
+          emailInfo.style.display = 'none';
+        }
+      });
+    </script>
+    
+    
+            
 <style>
 
 /* Hover para enlaces del menú */
