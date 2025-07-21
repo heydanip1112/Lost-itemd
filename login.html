@@ -184,7 +184,7 @@
                 </div><!--/login_form-->
               </div>
             </div>
-            <div class="u-align-right u-container-align-right u-container-style u-image u-image-round u-layout-cell u-radius-50 u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="3926" data-image-height="2943">
+              <div class="u-align-right u-container-align-right u-container-style u-image u-layout-cell u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" style="background-image: url('images/C.jpg');">
               <div class="u-container-layout u-container-layout-2"></div>
             </div>
           </div>
@@ -199,6 +199,98 @@
       </div>
     </footer>    
 <style>
+
+/* Centrar vertical y horizontalmente el contenido del login */
+.u-section-1 .u-sheet-1 {
+  display: flex;
+  justify-content: center; /* centrar horizontal */
+  align-items: center;     /* centrar vertical */
+  min-height: 100vh;       /* altura total del viewport */
+  padding: 0;
+}
+
+/* Contenedor visual estilo split (lado imagen + lado formulario) */
+.u-layout-row {
+  display: flex;
+  flex-direction: row;
+  min-height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #1e2a40; /* fondo general */
+}
+
+/* Lado izquierdo con imagen */
+.u-image-1 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  filter: brightness(0.8);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Texto sobre imagen */
+.u-image-1::after {
+  content: "Capturando momentos, creando recuerdos";
+  color: white;
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Lado derecho (formulario) */
+.u-layout-cell-1 {
+  background-color: #0d4076;
+  padding: 40px;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Títulos y etiquetas */
+.u-text-1,
+.u-label {
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Inputs */
+.u-input {
+  background-color: #142b4d;
+  color: white;
+  border: 1px solid #3c5f93;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* Botones */
+#show-login,
+#show-register,
+.u-btn-1 {
+  background-color: #5b8efb;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+}
+
+#show-login:hover,
+#show-register:hover,
+.u-btn-1:hover {
+  background-color: #3b6cd6;
+}
+
+/* Formulario */
+.u-inner-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 /* Estilos para los botones de alternar */
 #show-login, #show-register {
