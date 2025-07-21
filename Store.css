@@ -491,3 +491,30 @@
     width: 340px;
   }
 }
+
+/* Estilos para el carrito */
+.u-product-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.u-product-quantity button {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.u-product-quantity button:hover {
+  background: #e0e0e0;
+}
+
+#cart-items-container {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
