@@ -132,63 +132,67 @@
           </div>
       </div>
     </header>
-    <section class="u-clearfix u-section-1" id="block-1">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-34 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-align-center u-container-align-center u-container-style u-gradient u-layout-cell u-radius-50 u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1">
-                <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
-                  <h3 class="u-custom-font u-font-montserrat u-text u-text-body-alt-color u-text-default u-text-1">Iniciar sesión</h3><!--login_form-->
-                  <div class="custom-expanded u-form u-login-control u-form-1"><!--login_form_inner-->
-                    <!-- Botones para alternar -->
-                    <div style="text-align: center; margin-bottom: 20px;">
-                      <button id="show-login" type="button">Iniciar sesión</button>
-                      <button id="show-register" type="button">Registrarse</button>
+
+<section class="u-clearfix u-section-1" id="block-1">
+  <div class="u-clearfix u-sheet u-sheet-1">
+    <!-- Caja azul con bordes redondeados -->
+    <div style="background-color: #0d4076; border-radius: 20px; padding: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      <div class="data-layout-selected u-clearfix u-expanded-width u-gutter-34 u-layout-wrap u-layout-wrap-1">
+        <div class="u-layout">
+          <div class="u-layout-row">
+            <div class="u-align-center u-container-align-center u-container-style u-gradient u-layout-cell u-radius-50 u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-layout-cell-1">
+              <div class="u-container-layout u-valign-middle-xs u-container-layout-1">
+                <!--login_form-->
+                <div class="custom-expanded u-form u-login-control u-form-1">
+                  <!--login_form_inner-->
+
+                  <!-- Botones para alternar -->
+                  <div style="text-align: center; margin-bottom: 20px;">
+                    <button id="show-login" type="button">Iniciar sesión</button>
+                    <button id="show-register" type="button">Registrarse</button>
+                  </div>
+
+                  <!-- Formulario de Login -->
+                  <form id="login-form" class="u-inner-form">
+                    <div class="u-form-group u-form-name">
+                      <label for="login-username" class="u-label u-text-body-alt-color">Username *</label>
+                      <input type="text" id="login-username" class="u-input u-input-rectangle u-radius-50" required>
                     </div>
+                    <div class="u-form-group u-form-password">
+                      <label for="login-password" class="u-label u-text-body-alt-color">Password *</label>
+                      <input type="password" id="login-password" class="u-input u-input-rectangle u-radius-50" required>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <button type="submit" class="u-btn u-btn-1">Acceso</button>
+                    </div>
+                  </form>
 
-                    <!-- Formulario de Login -->
-                    <form id="login-form" class="u-inner-form">
-                      <div class="u-form-group u-form-name">
-                        <label for="login-username" class="u-label u-text-body-alt-color">Username *</label>
-                        <input type="text" id="login-username" class="u-input u-input-rectangle u-radius-50" required>
-                      </div>
-                      <div class="u-form-group u-form-password">
-                        <label for="login-password" class="u-label u-text-body-alt-color">Password *</label>
-                        <input type="password" id="login-password" class="u-input u-input-rectangle u-radius-50" required>
-                      </div>
-                      <div class="u-align-left u-form-group u-form-submit">
-                        <button type="submit" class="u-btn u-btn-1">Acceso</button>
-                      </div>
-                    </form>
-
-                    <!-- Formulario de Registro -->
-                    <form id="register-form" class="u-inner-form" style="display: none;">
-                      <div class="u-form-group u-form-name">
-                        <label for="register-username" class="u-label u-text-body-alt-color">Username *</label>
-                        <input type="text" id="register-username" class="u-input u-input-rectangle u-radius-50" required>
-                      </div>
-                      <div class="u-form-group u-form-password">
-                        <label for="register-password" class="u-label u-text-body-alt-color">Password *</label>
-                        <input type="password" id="register-password" class="u-input u-input-rectangle u-radius-50" required>
-                      </div>
-                      <div class="u-align-left u-form-group u-form-submit">
-                        <button type="submit" class="u-btn u-btn-1">Crear cuenta</button>
-                      </div>
-                    </form>
-                  </div><!--/login_form-->
-                </div>
+                  <!-- Formulario de Registro -->
+                  <form id="register-form" class="u-inner-form" style="display: none;">
+                    <div class="u-form-group u-form-name">
+                      <label for="register-username" class="u-label u-text-body-alt-color">Username *</label>
+                      <input type="text" id="register-username" class="u-input u-input-rectangle u-radius-50" required>
+                    </div>
+                    <div class="u-form-group u-form-password">
+                      <label for="register-password" class="u-label u-text-body-alt-color">Password *</label>
+                      <input type="password" id="register-password" class="u-input u-input-rectangle u-radius-50" required>
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <button type="submit" class="u-btn u-btn-1">Crear cuenta</button>
+                    </div>
+                  </form>
+                </div><!--/login_form-->
               </div>
-              <div class="u-align-right u-container-align-right u-container-style u-image u-image-round u-layout-cell u-radius-50 u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="3926" data-image-height="2943">
-                <div class="u-container-layout u-container-layout-2"></div>
-              </div>
+            </div>
+            <div class="u-align-right u-container-align-right u-container-style u-image u-image-round u-layout-cell u-radius-50 u-size-30-lg u-size-30-xl u-size-60-md u-size-60-sm u-size-60-xs u-image-1" data-image-width="3926" data-image-height="2943">
+              <div class="u-container-layout u-container-layout-2"></div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    
-    
+    </div> <!-- fin caja azul -->
+  </div>
+</section>
     
     <footer class="u-align-center u-clearfix u-container-align-center u-footer u-palette-1-dark-2 u-footer" id="footer"><div class="u-clearfix u-sheet u-sheet-1">
         <p class="u-small-text u-text u-text-variant u-text-1">Escuela Superior de Economía y Negocios&nbsp;</p>
