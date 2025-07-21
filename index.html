@@ -22,7 +22,8 @@
     <!-- Fuentes de Google -->
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
     <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
     <!-- Datos estructurados para SEO -->
     <script type="application/ld+json">{
       "@context": "http://schema.org",
@@ -297,6 +298,69 @@
     
             
 <style>
+/* Estilos para las tarjetas en la sección #sec-5803 */
+#sec-5803 .u-list-item {
+  padding: 25px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#sec-5803 .u-list-item:hover {
+  background-color: #021932;
+  color: white;
+}
+
+#sec-5803 .u-list-item:hover h4,
+#sec-5803 .u-list-item:hover p {
+  color: white;
+}
+
+#sec-5803 .u-list-item:hover h4 {
+  transform: scale(1.15);
+}
+
+#sec-5803 .u-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Tipografía para títulos y descripciones */
+#sec-5803 h4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: 15px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #444;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#sec-5803 p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+/* Estilo general de sección */
+#sec-5803 {
+  padding: 40px 20px;
+}
+
+#sec-5803 .u-list-1 .u-repeater-1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
 
 /* Hover para enlaces del menú */
 nav a {
